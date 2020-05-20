@@ -3,7 +3,7 @@ const Driver = require('../models/Drivers');
 
 const router = express.Router();
 
-// Create a new Driver
+// Create a new Driver profile
 router.post('/drivers', async (req, res) => {
     
     const driverData=req.body;
@@ -18,7 +18,7 @@ router.post('/drivers', async (req, res) => {
     }
 });
 
-// fetch a Driver items from database
+// fetch all driver profiles
 router.get("/drivers",(req,res)=>{
     Driver.find({})
     .then((driver)=>{
@@ -30,23 +30,50 @@ router.get("/drivers",(req,res)=>{
 });
 
 
-// fetching single todo
+//Getting single driver profile
 
 router.get("/drivers/:id", async(req,res)=>{
     const id=req.params.id;
     
-    // console.log(req.params);
+    //console.log(req.params);
     try{
-        const todo=await Todo.findById(id);
-            if(!todo){
-                return res.status(404).send({error: "Todo not found"});
+        const driver=await Driver.findById(id);
+            if(!driver){
+                return res.status(404).send({error: "Driver not found"});
             }
-            res.status(200).send(todo);
+            return res.status(200).send(driver);
     }catch(error){
-            res.status(400).send(error);
-     }
+           return res.status(400).send(error);
+     };
 });
 
+
+// editing a driver profile
+router.patch("/drivers/:id", async(req,res)=>{
+    const {bodastage}=req.body;
+    const{id}=req.params;
+    try{
+        const driver=await Driver.findById(id);
+        if(!driver){
+            return res.status(404).send({error: "Driver not found"});
+        }
+        driver.bodastage=bodastage
+        await driver.save();     
+    }catch(error){
+        res.status(400).send(error);   
+    }
+});
+
+// Deleting a driver profile
+router.delete("/drivers/:id", async(req,res)=>{
+    const{id}=req.params;
+    try{
+        const response=await Drivers.findByIdAndDelete(id);
+        res.status(200).send({message:"Driver deleted successfully"});
+    }catch(error){
+        res.status(400).send(error); 
+    }
+});
 
 
 module.exports = router;

@@ -30,7 +30,7 @@ const userSchema = mongoose.Schema({
         trim: true
     },
     RecruitementDate: {
-        type: Date,
+        type: String,
         required: true,
 
     },
