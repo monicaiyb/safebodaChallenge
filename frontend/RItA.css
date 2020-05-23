@@ -1,5 +1,5 @@
 
-.container-fluid{background-image: url("motorbike.jpg");
+body{background-image: url("motorbike.jpg");
     background-size: 100%;
     max-width: 100%;
     max-height: 100%;
@@ -141,6 +141,22 @@ position: center;
     background-color: #f1f1f1;
     text-align: center;
 }
-/*For Driver Register
+/*For Driver Register*/
 
+.form_reg{
+   background-color: rgba(0, 0, 0, .5); 
+   color: white;
+   border-radius: 2%;
+   padding: 2%;
+}
 
+.reg_left_div{
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.reg_right_div{
+    padding-left: 2%;
+    padding-right: 2%;
+   
+}
