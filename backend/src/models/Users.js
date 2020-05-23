@@ -3,12 +3,10 @@ const validator = require('validator');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
+const auth = require("../middleware/auth")
+
 const userSchema = mongoose.Schema({
-    name: {
-        type: String,
-        required: true,
-        trim: true
-    },
+   
     email: {
         type: String,
         required: true,
@@ -30,7 +28,14 @@ const userSchema = mongoose.Schema({
             type: String,
             required: true
         }
-    }]
+    }],
+
+	role:{
+        type:String,
+        required: true,
+        enum: ["admin","staff"],
+        default: "staff",
+    }
 });
 
 userSchema.pre('save', async function (next) {
@@ -45,7 +50,7 @@ userSchema.pre('save', async function (next) {
 userSchema.methods.generateAuthToken = async function() {
     // Generate an auth token for the user
     const user = this;
-    const token = jwt.sign({_id: user._id,email:user.email,}, 
+    const token = jwt.sign({id: user._id,email:user.email,role:user.role}, 
     "weAreWinners");
     user.tokens = user.tokens.concat({token});
     await user.save();
