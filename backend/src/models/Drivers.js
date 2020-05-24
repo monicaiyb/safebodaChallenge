@@ -29,12 +29,17 @@ const userSchema = mongoose.Schema({
         required: true,
         trim: true
     },
-    RecruitementDate: {
+    age:{
+        type: Number,
+        required: true,
+        unique: true,
+    },
+    recruitementDate: {
         type: String,
         required: true,
 
     },
-    RecruitementLocation: {
+    recruitementLocation: {
         type: String,
         required: true,
         
@@ -44,6 +49,12 @@ const userSchema = mongoose.Schema({
         required: true,
         trim: true
     },
+    nextKinPhone: {
+        type: Number,
+        required: true,
+        trim: true
+    },
+
 });
 
 const Driver = mongoose.model('Driver', userSchema);
