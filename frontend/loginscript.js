@@ -1,44 +1,24 @@
-const urlUsers="http://localhost:3000/users"
+const url="http://localhost:8080/users"
 
-
-// Login button action on click
-const emailInput =document.getElementById("loginemail");
-const selectedInput=document.getElementById("selector")
-const passwordInput=document.getElementById("loginpassword");
-const loginBtn=document.getElementById("login_submit");
-     
-    loginBtn.addEventListener("click",(event)=>{
-    event.preventDefault();
+    const loginBtn=document.querySelector(".login")
+    loginBtn.addEventListener("click",(e)=>{
+        e.preventDefault();
+        const emailInput =document.querySelector(".loginemail");
+        const passwordInput=document.querySelector(".loginpassword");   
         
-        const getInputValue=(element)=>{
-        return element.value;
-        }
-
-    const elementValue=element.value
-    if (elementValue===""){
-        alert("Please fill in both email and password fields");
-    }else{
+        const getElementValue=(element)=>{
+            return element;
+          }
+            const emailValue=getElementValue(emailInput);
+            const passwordValue=getElementValue(passwordInput);
+            const loginData=({emailValue,passwordValue});
+            loginUser(loginData)
+    })
     
-        const emailValue=getInputValue(emailInput);
-        const selectedValue=getInputValue(selectedInput);
-        const passwordValue=getInputValue(passwordInput);
-        const loginData=({emailValue,selectedValue,passwordValue});
-
-        loginUser(loginData);
-
-    }
-
-    emailInput.value="";
-    selectedInput.value="";
-    passwordInput.value="";
-    
-    });
-    
-
     // create a new user
     const SignUpUser=(user)=>{
         const userData=JSON.stringify(user)
-        fetch(urlUsers,{
+        fetch(url,{
             method:"POST",
             body:userData,
             headers:{
@@ -54,12 +34,11 @@ const loginBtn=document.getElementById("login_submit");
             console.log(error);
         });
     };
-
 //Login a registered User
 const loginUser = (user) =>{
     const userData = JSON.stringify();
     console.log (userData);
-    fetch (urlUser, {
+    fetch (url, {
         method: "POST",
         body: userData,
         headers:{
@@ -74,8 +53,16 @@ const loginUser = (user) =>{
     .catch((error)=>{
     console.log(error)
     })
+
+    const logoutBtn=getElementById("logout");
+    const user () {
+      
+        localStorage.removeItem('token')
+        localStorage.removeItem('user')
+      }
+  logoutBtn.addEventListener('click',(e)=>{
+    e.preventDefault();
+    
+  })
 }
 
-router.get("/user/profile",(req,res)=>{
-    res.status(200).send(req.user);
-})

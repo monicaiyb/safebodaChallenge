@@ -17,8 +17,7 @@
     "mongodb": "^3.5.7",
     "mongoose": "^5.9.14",
     "nodemon": "^2.0.4",
-    "parser": "^0.1.4",
-    "validator": "^13.0.0"
+    "parser": "^0.1.4"
   },
   "devDependencies": {},
   "description": ""
