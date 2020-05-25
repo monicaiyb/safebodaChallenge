@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const validator = require('validator');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
@@ -7,12 +6,6 @@ const userSchema = mongoose.Schema({
     firstName: {
         type: String,
         required: true,
-        trim: true
-    },
-    lastName: {
-        type: String,
-        required: true,
-        trim: true
     },
     NIN: {
         type: String,
@@ -22,37 +15,39 @@ const userSchema = mongoose.Schema({
     phone: {
         type: Number,
         required: true,
-        unique: true,
+        
     },
-    bodastage: {
+    nextKin: {
         type: String,
         required: true,
-        trim: true
-    },
-    age:{
-        type: Number,
-        required: true,
-        unique: true,
     },
     recruitementDate: {
         type: String,
         required: true,
 
     },
-    recruitementLocation: {
+    lastName: {
         type: String,
         required: true,
         
     },
-    nextKin: {
+    age:{
+        type: Number,
+        required: true,
+        unique: true,
+    },
+    bodastage: {
         type: String,
         required: true,
-        trim: true
     },
     nextKinPhone: {
         type: Number,
         required: true,
-        trim: true
+        
+    },
+    recruitementLocation: {
+        type: String,
+        required: true,
     },
 
 });

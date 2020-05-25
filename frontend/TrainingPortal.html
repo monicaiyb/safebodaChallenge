@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RiTA</title>
+    
+    <link rel = "icon" href =  "./ImagesUsed/orange bike.png" type = "image/x-icon">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="./RItA.css">
+    <link rel="stylesheet" href="./recruiter.css">
+    <style> 
+      body {background-image: url("ImagesUsed/motorbike.jpg");
+          background-size: cover;} 
+      tr {
+          background-color: #4e4747;
+      }
+      h2,p{
+        margin:0;
+        padding: 0 0 20px;
+        color: #ffffff;
+      }
+      table{
+          width: 30%;
+      }
+      th{
+        margin:0;
+        padding: 0 0 20px;
+        color: #ff7f00;
+      }
+    </style>
+</head>
+<body>
+  <button type="submit" class="btn btn-secondary float-right">Logout</button>
+    <!--navbar-->
+<nav class="navbar navbar-expand-md navbar-light">
+    <div class="collapse navbar-collapse" id="#myNavbar">
+      <div class="container-fluid">
+        <div class="row">
+          <!--sidebar-->
+          <div class="col-xl-2 col-md-4 col-lg-3 sidebar fixed-top">
+            <a href="#" class="navbar-brand text-white d-block 
+            mx-auto text-center py-3 mb-4 bottom-border">RiTA</a>
+            <div class="bottom-border pb-3">
+              <img src="ImagesUsed/images.jpg" width="50" class="rounded-circle mr-3">
+              <a href="#" class="text-white">Dorothy Palesa</a>
+            </div>
+            <ul class="navbar-nav flex-column mt-4">
+                <li class="nav-item"><a href="./RegistrationForm.html" class="nav-link 
+                    text-white p-3 mb-4 sidebar-link"><i class="fas fa-home 
+                    text-light fa-lg mr-3"></i>Register Driver </a></li>
+              <li class="nav-item"><a href="./SafeBodaPortal.html" class="nav-link 
+                    text-white p-3 mb-4 sidebar-link"><i class="fas fa-home 
+                    text-light fa-lg mr-3"></i>Registered Drivers</a></li>
+                <li class="nav-item"><a href="./TrainingPortal.html" class="nav-link 
+                    text-white p-3 mb-4 sidebar-link"><i class="fas fa-home 
+                    text-light fa-lg mr-3"></i>In Training </a></li>
+                <li class="nav-item"><a href="./ActivationPortal.html" class="nav-link 
+                    text-white p-3 mb-4 sidebar-link"><i class="fas fa-home 
+                    text-light fa-lg mr-2"></i>Ready for Activation</a></li>
+                <li class="nav-item"><a href="#" class="nav-link 
+                    text-white p-3 mb-4 sidebar-link"><i class="fas fa-home 
+                    text-light fa-lg mr-3"></i>Download Report</a></li> 
+           </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!--end of navbar-->
+
+  <!--section-->
+  <section>
+    <div class="container-fluid">
+    <div class="row mb-5">
+    <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+    <div class="row">
+    <div class="col-12">
+        <h3 class="text-white text-center mb-3">Drivers In Training</h3>
+        <table class="table table-dark table-hover text-centre">
+          <thead>
+            <tr class="text-muted">
+              <th>No.</th>
+              <th>Name</th>
+              <th>Date of Recruitment</th>
+              <th>National Identity Number</th>
+              <th>Status</th>
+              <th>Phone Number</th>
+            </tr>
+          </thead>
+          <tbody>
+                <tr>
+                <th>1</th>
+                <td ><a class="text-white" href="./driverprofile.html">KESA</a></td>
+                <td>59999</td>
+                <td>15/01/2019</td>
+                <td><span class="badge badge-success w-75 py-2">Approved</span></td>
+                <td>888888</td>
+                </tr>
+          </tbody>
+        </table> 
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+  </section>
+  <!--end of section-->
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RiTA</title>
+    <link rel = "icon" href =  "./ImagesUsed/orange bike.png" type = "image/x-icon">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="./RItA.css">
+    <style> 
+        body {background-image: url("ImagesUsed/motorbike.jpg");
+            background-size: cover;} 
+        </style>
+    
+</head>
+<body> 
+  <button type="submit" class="btn btn-secondary float-right">Logout</button>
+    <form id="form">
+        <div class="container">
+            <div class="row">
+              <div class="col mt-4 md-4">
+                <form class="form_reg" id="register"> 
+                    <h4 class="text-white">Welcome to RItA, Registration for SafeBoda</h4>
+                    <div class=" text-white form-row">
+                      <div class="form-group col-md-4 reg_left_div">
+                        <label for="firstName">First Name</label>
+                        <input type="text" class="form-control" id="firstName">
+                        <label for="nin">Id No.</label>
+                        <input type="text" class="form-control" id="nin">
+                        <label for="phone">Phone No.</label>
+                        <input type="number" class="form-control" id="phone">
+                        <label for="kin">Next of kin</label>
+                        <input type="text" class="form-control" id="kin">
+                          <label for="reg_date">Registration Date</label>
+                        <input type="text" class="form-control" id="reg_location">
+                      </div>
+                      <div class="form-group col-md-4 reg_right_div">
+                        <label for="lname">Last Name</label>
+                        <input type="text" class="form-control" id="lname">
+                        <label for="age">Age</label>
+                        <input type="number" class="form-control" id="age">
+                        <label for="stage">Boda Stage</label>
+                        <input type="text" class="form-control" id="stage">
+                        <label for="kin_phone">Next of kin Phone No</label>
+                        <input type="text" class="form-control" id="kin_phone">
+                        <label for="reg_location">Registered  </label>
+                        <input type="text" class="form-control" id="reg_location">
+                      </div>
+      
+                    </div>
+                    <div class="form-group">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <label class="form-check-label" for="gridCheck">
+                          I agree to safe boda terms and conditions.
+                        </label>
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id= "register_btn">Register</button>
+                  </form>
+              </div> 
+            </div>
+         </div>
+         <script src="./driversScript.js"></script>
+    </form>
+</body>

@@ -1,11 +1,10 @@
 {
   "name": "safebodachallenge",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/index.js"
+    "start": "nodemon src/index.js"
   },
   "author": "team Ace",
   "license": "ISC",
@@ -17,7 +16,10 @@
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.5.7",
     "mongoose": "^5.9.14",
+    "nodemon": "^2.0.4",
     "parser": "^0.1.4",
     "validator": "^13.0.0"
-  }
+  },
+  "devDependencies": {},
+  "description": ""
 }
