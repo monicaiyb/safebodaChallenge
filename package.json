@@ -1,0 +1,19 @@
+{
+  "name": "safebodachallenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monicaiyb/safebodaChallenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/monicaiyb/safebodaChallenge/issues"
+  },
+  "homepage": "https://github.com/monicaiyb/safebodaChallenge#readme"
+}

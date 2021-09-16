@@ -55,7 +55,7 @@ const loginUser = (user) =>{
     })
 
     const logoutBtn=getElementById("logout");
-    const user () {
+    const user =()=> {
       
         localStorage.removeItem('token')
         localStorage.removeItem('user')
